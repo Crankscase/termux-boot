@@ -1,7 +1,13 @@
-version: 2
-updates:
-- package-ecosystem: github-actions
-  directory: /
+on:
+  push:
+    branches:
+    - main
+    - release/*
+    on:
+  pull_request:
+    branches:
+    - main
+    on:
   schedule:
-    interval: daily
-    
+  - cron: "0 2 * * 1-5"
+  
